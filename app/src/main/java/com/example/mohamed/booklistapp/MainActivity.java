@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String LOG_TAG = MainActivity.class.getSimpleName();
 
     private static final String BOOK_REQUEST_URL =
-            "https://www.googleapis.com/books/v1/volumes?q";
+            "https://www.googleapis.com/books/v1/volumes?q=";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private class BookAsyncTask extends AsyncTask<URL, Void, ArrayList<Book>> {
+    private  class BookAsyncTask extends AsyncTask<URL, Void, ArrayList<Book>> {
         private String searchInput = mSearchEditText.getText().toString();
 
         @Override
